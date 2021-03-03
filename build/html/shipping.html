@@ -34,12 +34,13 @@
             
   <div class="section" id="shipping-things">
 <h1>Shipping Things<a class="headerlink" href="#shipping-things" title="永久链接至标题">¶</a></h1>
+<div class="section" id="economyshipping-tablerates">
+<h2>EconomyShipping(TableRates)的计算规则<a class="headerlink" href="#economyshipping-tablerates" title="永久链接至标题">¶</a></h2>
 <blockquote>
-<div><p>EconomyShipping(TableRates)的计算规则
-首先调用接口，由接口返回数据。调用接口失败的情况下，按照Magento原生的TableRates规则计算。</p>
+<div><p>首先调用接口，由接口返回数据。调用接口失败的情况下，按照Magento原生的TableRates规则计算。</p>
 </div></blockquote>
 <div class="section" id="shippingapi">
-<h2>ShippingApi地址设置<a class="headerlink" href="#shippingapi" title="永久链接至标题">¶</a></h2>
+<h3>ShippingApi地址设置<a class="headerlink" href="#shippingapi" title="永久链接至标题">¶</a></h3>
 <img alt="_images/shipping-api-config.png" src="_images/shipping-api-config.png" />
 <p><strong>Api For Staging</strong>:
 <a class="reference external" href="https://staging-webapi.toolots.com.cn/merchantportal/api/shipping/carrierrate">https://staging-webapi.toolots.com.cn/merchantportal/api/shipping/carrierrate</a></p>
@@ -47,6 +48,18 @@
 <img alt="_images/shipping-api-postman-simple-product.png" src="_images/shipping-api-postman-simple-product.png" />
 <p><strong>Postman Example (Bundle Product)</strong></p>
 <img alt="_images/shipping-api-postman-bundle-product.png" src="_images/shipping-api-postman-bundle-product.png" />
+</div>
+</div>
+<div class="section" id="id1">
+<h2>调试相关<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>生成shipping rates</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$quote</span> <span class="o">=</span> <span class="nx">Mage</span><span class="o">::</span><span class="na">getModel</span><span class="p">(</span><span class="s1">&#39;checkout/cart&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">getQuote</span><span class="p">();</span>
+<span class="nv">$address</span><span class="o">=</span><span class="nv">$quote</span><span class="o">-&gt;</span><span class="na">getShippingAddress</span><span class="p">();</span>
+<span class="nv">$address</span><span class="o">-&gt;</span><span class="na">setCollectShippingRates</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+<span class="nv">$address</span><span class="o">-&gt;</span><span class="na">collectShippingRates</span><span class="p">();</span>
+<span class="nv">$address</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -72,7 +85,8 @@
 <li class="toctree-l1"><a class="reference internal" href="m2epro.html">Module Me2Pro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toolots.html">Package Toolots</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Shipping Things</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#shippingapi">ShippingApi地址设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#economyshipping-tablerates">EconomyShipping(TableRates)的计算规则</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">调试相关</a></li>
 </ul>
 </li>
 </ul>
