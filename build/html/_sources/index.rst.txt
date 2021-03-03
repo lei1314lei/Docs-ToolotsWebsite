@@ -15,6 +15,8 @@ Modules
 
    m2epro
    toolots
+   shipping
+
 .. image:: 1.jpg
 
 .. code:: python

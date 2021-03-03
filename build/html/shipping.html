@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>索引 &#8212; ToolotsWebsite  文档</title>
+    <title>Shipping Things &#8212; ToolotsWebsite  文档</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -13,8 +13,9 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/translations.js"></script>
-    <link rel="index" title="索引" href="#" />
+    <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="Package Toolots" href="toolots.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -31,11 +32,22 @@
 
           <div class="body" role="main">
             
-
-<h1 id="index">索引</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="shipping-things">
+<h1>Shipping Things<a class="headerlink" href="#shipping-things" title="永久链接至标题">¶</a></h1>
+<blockquote>
+<div><p>EconomyShipping(TableRates)的计算规则
+首先调用接口，由接口返回数据。调用接口失败的情况下，按照Magento原生的TableRates规则计算。</p>
+</div></blockquote>
+<div class="section" id="shippingapi">
+<h2>ShippingApi地址设置<a class="headerlink" href="#shippingapi" title="永久链接至标题">¶</a></h2>
+<img alt="_images/shipping-api-config.png" src="_images/shipping-api-config.png" />
+<p><strong>Api For Staging</strong>:
+<a class="reference external" href="https://staging-webapi.toolots.com.cn/merchantportal/api/shipping/carrierrate">https://staging-webapi.toolots.com.cn/merchantportal/api/shipping/carrierrate</a></p>
+<p><strong>Postman Example (Simple Product)</strong></p>
+<img alt="_images/shipping-api-postman-simple-product.png" src="_images/shipping-api-postman-simple-product.png" />
+<p><strong>Postman Example (Bundle Product)</strong></p>
+<img alt="_images/shipping-api-postman-bundle-product.png" src="_images/shipping-api-postman-bundle-product.png" />
+</div>
 </div>
 
 
@@ -56,16 +68,20 @@
 
 <h3>导航</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="m2epro.html">Module Me2Pro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toolots.html">Package Toolots</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shipping.html">Shipping Things</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Shipping Things</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#shippingapi">ShippingApi地址设置</a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="toolots.html" title="上一章">Package Toolots</a></li>
   </ul></li>
 </ul>
 </div>
@@ -98,6 +114,9 @@
       Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
+      |
+      <a href="_sources/shipping.rst.txt"
+          rel="nofollow">Page source</a>
     </div>
 
     
