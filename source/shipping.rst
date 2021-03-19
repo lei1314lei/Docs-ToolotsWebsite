@@ -28,12 +28,19 @@ https://staging-webapi.toolots.com.cn/merchantportal/api/shipping/carrierrate
 
 调试相关
 ^^^^^^^^^^^^
-生成shipping rates
-
-.. code-block:: php
+生成shipping rates的客户端代码 ::
 
         $quote = Mage::getModel('checkout/cart')->getQuote();
         $address=$quote->getShippingAddress();
         $address->setCollectShippingRates(true);
         $address->collectShippingRates();
         $address->save();
+
+计算ShippingRates ::
+
+       $result = Mage::getModel('shipping/shipping')->collectRates($request)->getResult();
+       $shippingRates = $result->getAllRates();
+
+ShippingRate与QuoteAddress绑定 ::
+
+      $quoteAddress->addShippingRate($rate);

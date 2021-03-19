@@ -16,6 +16,8 @@ Modules
    m2epro
    toolots
    shipping
+   extension/signifyd
+   Cache/Redis/troubleshooting
 
 .. image:: 1.jpg
 

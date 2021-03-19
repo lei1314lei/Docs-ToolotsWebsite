@@ -15,6 +15,7 @@
     <script src="_static/translations.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Signify Extension Things" href="extension/signifyd.html" />
     <link rel="prev" title="Package Toolots" href="toolots.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -52,12 +53,21 @@
 </div>
 <div class="section" id="id1">
 <h2>调试相关<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p>生成shipping rates</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$quote</span> <span class="o">=</span> <span class="nx">Mage</span><span class="o">::</span><span class="na">getModel</span><span class="p">(</span><span class="s1">&#39;checkout/cart&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">getQuote</span><span class="p">();</span>
-<span class="nv">$address</span><span class="o">=</span><span class="nv">$quote</span><span class="o">-&gt;</span><span class="na">getShippingAddress</span><span class="p">();</span>
-<span class="nv">$address</span><span class="o">-&gt;</span><span class="na">setCollectShippingRates</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
-<span class="nv">$address</span><span class="o">-&gt;</span><span class="na">collectShippingRates</span><span class="p">();</span>
-<span class="nv">$address</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+<p>生成shipping rates的客户端代码</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$quote = Mage::getModel(&#39;checkout/cart&#39;)-&gt;getQuote();
+$address=$quote-&gt;getShippingAddress();
+$address-&gt;setCollectShippingRates(true);
+$address-&gt;collectShippingRates();
+$address-&gt;save();
+</pre></div>
+</div>
+<p>计算ShippingRates</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$result = Mage::getModel(&#39;shipping/shipping&#39;)-&gt;collectRates($request)-&gt;getResult();
+$shippingRates = $result-&gt;getAllRates();
+</pre></div>
+</div>
+<p>ShippingRate与QuoteAddress绑定</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$quoteAddress-&gt;addShippingRate($rate);
 </pre></div>
 </div>
 </div>
@@ -89,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id1">调试相关</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="extension/signifyd.html">Signify Extension Things</a></li>
 </ul>
 
 <div class="relations">
@@ -96,6 +107,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="toolots.html" title="上一章">Package Toolots</a></li>
+      <li>Next: <a href="extension/signifyd.html" title="下一章">Signify Extension Things</a></li>
   </ul></li>
 </ul>
 </div>
