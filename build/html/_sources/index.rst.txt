@@ -18,6 +18,8 @@ Modules
    shipping
    extension/signifyd
    Cache/Redis/troubleshooting
+   Cache/Redis/commonCommands
+   Hosting/AWS/index
 
 .. image:: 1.jpg
 
