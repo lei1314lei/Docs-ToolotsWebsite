@@ -20,6 +20,9 @@ Modules
    Cache/Redis/troubleshooting
    Cache/Redis/commonCommands
    Hosting/AWS/index
+   Hosting/fileTransfering
+   Order/index
+   Editor/nvim
 
 .. image:: 1.jpg
 

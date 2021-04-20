@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signify Extension Things &#8212; ToolotsWebsite  文档</title>
+    <title>Fraud Order Identification &#8212; ToolotsWebsite  文档</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -15,8 +15,7 @@
     <script src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Redis Things" href="../Cache/Redis/troubleshooting.html" />
-    <link rel="prev" title="Shipping Things" href="../shipping.html" />
+    <link rel="prev" title="Order Things" href="index.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,15 +32,20 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="signify-extension-things">
-<h1>Signify Extension Things<a class="headerlink" href="#signify-extension-things" title="永久链接至标题">¶</a></h1>
-<p>Installation  Documentation for magento 1
-<a class="reference external" href="https://community.signifyd.com/support/s/article/magento-1-extension-install-guide">https://community.signifyd.com/support/s/article/magento-1-extension-install-guide</a></p>
-<div class="section" id="restrict-payment-methods">
-<h2>Restrict Payment Methods:<a class="headerlink" href="#restrict-payment-methods" title="永久链接至标题">¶</a></h2>
-<p>ACH and Wire should not be sent to Signifyd. You can use Restrict Payment Methods to prevent these payment types from passing to Signifyd:</p>
-<p><a class="reference external" href="https://github.com/signifyd/magento1/blob/master/docs/RESTRICT-PAYMENTS.md">https://github.com/signifyd/magento1/blob/master/docs/RESTRICT-PAYMENTS.md</a></p>
-</div>
+  <div class="section" id="fraud-order-identification">
+<h1>Fraud Order Identification<a class="headerlink" href="#fraud-order-identification" title="永久链接至标题">¶</a></h1>
+<p>We use extension ‘Signifyd_Connect’ to identify the order is fraud one or not. And we make some changs during integration to make it suit Toolots, here’s the things need to pay attention to</p>
+<ol class="arabic">
+<li><p>Just orders paid with braintree credit card are allowed to send to signifyd</p>
+<img alt="../_images/restrictionExceptBraintreeCrediCard.png" src="../_images/restrictionExceptBraintreeCrediCard.png" />
+</li>
+<li><p>To make signifyd identify ‘Will Call’ order , we made some change followed by signifyd’s guidance</p>
+<img alt="../_images/pickupInStoreRequestChanges.png" src="../_images/pickupInStoreRequestChanges.png" />
+</li>
+<li><p>Invoice generation should be triggered after that one order are approved by signifyd</p>
+<img alt="../_images/autoInvoice.png" src="../_images/autoInvoice.png" />
+</li>
+</ol>
 </div>
 
 
@@ -66,24 +70,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../m2epro.html">Module Me2Pro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../toolots.html">Package Toolots</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../shipping.html">Shipping Things</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Signify Extension Things</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#restrict-payment-methods">Restrict Payment Methods:</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/signifyd.html">Signify Extension Things</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Cache/Redis/troubleshooting.html">Redis Things</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Cache/Redis/troubleshooting.html#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Cache/Redis/commonCommands.html">Common Commands Of Redis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Hosting/AWS/index.html">Hosting - AWS Things</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Hosting/fileTransfering.html">File Transtering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Order/index.html">Order Things</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Order Things</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Fraud Order Identification</a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../shipping.html" title="上一章">Shipping Things</a></li>
-      <li>Next: <a href="../Cache/Redis/troubleshooting.html" title="下一章">Redis Things</a></li>
+  <li><a href="index.html">Order Things</a><ul>
+      <li>Previous: <a href="index.html" title="上一章">Order Things</a></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>
@@ -117,7 +122,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="../_sources/extension/signifyd.rst.txt"
+      <a href="../_sources/Order/fraudIdentification.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
