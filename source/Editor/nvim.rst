@@ -16,3 +16,21 @@ Install project management plugin
    
 About python support ,refers to 
 https://neovim.io/doc/user/provider.html
+
+
+Usage
++++++++++++
+查看当前目录列表
+:!ls
+
+打开文件
+:e  {path to the file}
+
+切换目录
+:cd  d:
+
+
+
+
+
+
