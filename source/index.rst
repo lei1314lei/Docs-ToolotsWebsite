@@ -13,18 +13,12 @@ Modules
    :maxdepth: 2
    :caption: Contents:
 
-   m2epro
-   toolots
-   shipping
-   extension/signifyd
-   Cache/Redis/troubleshooting
-   Cache/Redis/commonCommands
-   Hosting/AWS/index
-   Hosting/fileTransfering
-   Order/index
-   Editor/nvim
+   Cache/index
+   Editor/index
+   Toolots/Magento/index
+   Toolots/Hosting/index
 
-.. image:: 1.jpg
+.. image:: images/1.jpg
 
 .. code:: python
 
