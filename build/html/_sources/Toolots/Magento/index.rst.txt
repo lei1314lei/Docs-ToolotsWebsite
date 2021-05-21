@@ -1,5 +1,5 @@
-Magento
-=======
+Magento(Toolots)
+========================
 
 .. toctree::
    :maxdepth: 2

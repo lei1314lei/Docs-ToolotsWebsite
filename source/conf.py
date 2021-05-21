@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'ToolotsWebsite'
+project = 'Martin\'s Documentation'
 copyright = '2021, Martin'
 author = 'Martin'
 

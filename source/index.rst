@@ -1,9 +1,9 @@
-.. ToolotsWebsite documentation master file, created by
+.. Martin's documentation master file, created by
    sphinx-quickstart on Sun Feb 21 15:13:48 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ToolotsWebsite's documentation!
+Welcome to Martin's documentation!
 ==========================================
 
 Modules
@@ -17,6 +17,7 @@ Modules
    Editor/index
    Toolots/Magento/index
    Toolots/Hosting/index
+   CustomizedFunctionality/index
 
 .. image:: images/1.jpg
 
